@@ -1,8 +1,8 @@
 //Import telegraf
 const { Telegraf } = require('telegraf');
-const { Router, Markup } = Telegraf;
+const { Markup } = Telegraf;
 //Environment variables
-const bot = new Telegraf(process.env.BOT_TOKEN)
+const bot = new Telegraf(process.env.BOT_TOKEN);
 const inviteLink = process.env.GROUP_INVITE_LINK;
 const adminId = process.env.ADMIN_ID;
 
@@ -16,7 +16,7 @@ const inlineMessageRatingKeyboard = [[
 */
 
 //Register message
-registerText = (name) => {
+const registerText = (name) => {
     if (!name) name = "کاربر گرامی";
     return `سلام ${name} برای عضویت در گروه لطفا اطلاعات زیر رو همین پایین برام بنویس 😁👍
 
@@ -28,7 +28,7 @@ registerText = (name) => {
 } 
 
 //Confirmed message
-confirmedText = (name) => {
+const confirmedText = (name) => {
     if (!name) name = "کاربر";
     return `ای ${name} عزیز اطلاعاتت مورد تایید ما بود ✅
 از طریق این لینک میتونی به جمع ما بیپیوندی :
@@ -38,7 +38,7 @@ ${inviteLink}
 } 
 
 //Not confirmed message
-notConfirmedText = (name) => {
+const notConfirmedText = (name) => {
     if (!name) name = "کاربر";
     return `ای ${name} عزیز اطلاعاتت مورد تایید ما نیست 🚫
 اگه سوالی داشتی ٬ به این آیدی پیام بده :
