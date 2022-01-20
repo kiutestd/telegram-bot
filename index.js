@@ -12,7 +12,7 @@ const inlineMessageRatingKeyboard = [
 ];
 
 /*
- *** Global values
+ *** Global values test
  */
 
 //Register message
